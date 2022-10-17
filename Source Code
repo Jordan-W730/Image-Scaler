@@ -1,0 +1,57 @@
+# this code is relatively simple, however you will need to have downloaded pygame, and provided a valid source image in order for it to run
+# the image provided will be increased in size by a factor of 4 and displayed on your screen
+# this code can be adusted to scale to different sizes, simply adjust the following lines: 22, 38, 42
+# in order to adjust these values, you'll need to change the scalar vlaues "4" to your desired value, please ensure you adjust them appropriately
+
+
+# import libraries
+
+import pygame, random, sys
+
+# get name of source image from user command-line
+
+source_image = sys.argv[1]
+source_image = pygame.image.load(source_image)
+
+# get width and height of original image
+
+source_image_height = source_image.get_height()
+source_image_width = source_image.get_width()
+
+# create a screen with 4 times the dimensions of the original image
+
+display = pygame.display.set_mode((source_image_width * 4, source_image_height * 4))
+
+# loop through rows of original image
+
+for y in range(0, source_image_height):
+
+    # loop through coloums of the original image
+    
+    for x in range(0, source_image_width):
+    
+        # find (r, g, b) value at position (x, y) of original image
+    
+        pixel_colour = source_image.get_at((x, y)
+        
+        # loop through rows of a 4 pixels * 4 pixels
+        
+        for z in range(y * 4, (y * 4) + 4):
+        
+            # loop through coloumns of 4 pixels * 4 pixels square
+        
+            for w in range(x * 4, (x * 4) + 4):
+                
+                    # sets the colour of the pixel at position (w, z) to pixel_colour on the display
+                
+                    display.set_at((w, z), pixel_colour)
+                    
+                    pygame.display.flip()
+                                                                                
+# keep window open for designated amount of time, in this case, 5000 milliseonds
+                            
+pygame.time.wait(5000)
+        
+        
+        
+        
