@@ -1,3 +1,6 @@
+# most recent update: 2022 - 10 - 17
+# changes made: added source code
+
 # this code is relatively simple, however you will need to have downloaded pygame, and provided a valid source image in order for it to run
 # the image provided will be increased in size by a factor of 4 and displayed on your screen
 # this code can be adusted to scale to different sizes, simply adjust the following lines: 22, 38, 42
